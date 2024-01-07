@@ -1,29 +1,52 @@
 #include <stdio.h>
 int main(void)
 {
-	int persons,i,sum=0;
-	int times[5],res[5];
-	int min=times[0];
+	int persons,i,j,k,temp,sum=0;
 	scanf("%d",&persons);
-	scanf("%d %d %d %d %d",&times[0],&times[1],&times[2],&times[3],&times[4]);
-	//¿À¸§Â÷¼øÀ¸·Î Á¤·Ä 
-	for(i=0;i<5;i++)
+	int times[persons],res[persons];
+	for(i=0;i<persons;i++)
 	{
-		
-		//Å©±âºñ±³ 
+		scanf("%d",&times[i]);
 	}
-	//Á¤·ÄµÈ ¹è¿­ times[5]
-	
-	//°¢ »ç¶÷µéÀÇ ÃÑ ½Ã°£ÀÇ ÇÕ°è
-	for(i=0;i<5;i++)
+//ë°°ì—´ í˜•ì´ ê³ ì •ë˜ì–´ ìžˆì–´ì„œ ê¸¸ì´ê°€ ë‹¬ë¼ì§€ë©´ í‹€ë¦¬ê²Œ ëœë‹¤.
+ 
+	//ì˜¤ë¦„ì°¨ìˆœìœ¼ë¡œ ì •ë ¬ 
+	for(i=0;i<persons-1;i++)
 	{
-		//i¹øÂ° »ç¶÷ÀÇ ±â´Ù¸®´Â ½Ã°£ÀÇ ÇÕ
-		//res[i] = times[0] + times[1] + ...times[i] ÇüÅÂ 		
+		for(j=i+1;j<persons;j++)
+		{
+			if(times[i] > times[j])
+			{
+				temp = times[j];
+				times[j] = times[i];
+				times[i] = temp;
+			}
+		}
+
+		}
+	/*for(i=0;i<persons;i++)
+	{
+		printf("%d ",times[i]);
+	}*/ 
+	
+	//ì •ë ¬ëœ ë°°ì—´ times[5]
+
+	//ê° ì‚¬ëžŒë“¤ì˜ ì´ ì‹œê°„ì˜ í•©ê³„
+	//ië²ˆì§¸ ì‚¬ëžŒì˜ ê¸°ë‹¤ë¦¬ëŠ” ì‹œê°„ì˜ í•©
+	//res[i] = times[0] + times[1] + ...times[i] í˜•íƒœ 	
+	for(i=0;i<persons;i++)
+	{
+		sum += times[i];
+		res[i] = sum;
+		//printf("%dë²ˆì§¸ ì‚¬ëžŒì˜ ì‹œê°„ì€ %dìž…ë‹ˆë‹¤.\n", i+1,res[i]);
 	} 
-	//¸ðµç »ç¶÷ÀÇ ´ë±â ½Ã°£ÀÇ ÃÑÇÕ
-	for(i=0;i<5;i++)
+	//sum ë³€ìˆ˜ ì´ˆê¸°í™” 
+	sum=0;
+	//ëª¨ë“  ì‚¬ëžŒì˜ ëŒ€ê¸° ì‹œê°„ì˜ ì´í•©
+	for(i=0;i<persons;i++)
 	{
 		sum+=res[i];
+		//printf("%d\n", sum);
 	} 
 	printf("%d",sum);
 	return 0;
