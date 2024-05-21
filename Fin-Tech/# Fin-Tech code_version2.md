@@ -457,10 +457,10 @@ int main() {
 <img src="./BFS.png" width="50%" height="50%">   
 
 ***
-## __*BFS Algorithm*__
+## __*DFS Algorithm*__
 ```c
 #include <stdio.h>
-#include <stdlib.h>
+#include <ddstdlib.h>
 
 #define MAX 100
 
