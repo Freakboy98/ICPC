@@ -41,8 +41,8 @@ void loop(void) {
   int16_t NH3; // NH3 암모니아
   int16_t NO2; // NO2 이산화질소
   int16_t HCN; // HCN 시안화수소 
-			   //질소를 포함한 물질
-			   //(EX: 플라스틱,섬유)이 연소될 때 발생
+		//질소를 포함한 물질
+		//(EX: 플라스틱,섬유)이 연소될 때 발생
 			   
   CO = ads.readADC_SingleEnded(0); // 0번 채널
   NH3 = ads.readADC_SingleEnded(1); // 1번 채널
@@ -162,10 +162,10 @@ DHT dht(DHTPIN, DHTTYPE); // 온/습도 센서 초기화
 int16_t gas_condition = 0; // 가스센서 화재 판단을 위한 변수
 int16_t temp_condition = 0; //온도센서 화재 판단을 위한 변수 
 int16_t explo = 0; // 폭발성 여부를 확인하기 위한 변수 
-int16_t error_type = 0; // 최종 판단을 위한 변수 
-						// 1이면 가스센서 이상
-					    // 2이면 온도센서 이상, 3이면 종합센서 이상으로 간주 
-					    // error_type을 장비의 return 값으로  
+int16_t error_type = 0; // 최종 판단을 위한 변수
+			// 1이면 가스센서 이상
+			// 2이면 온도센서 이상, 3이면 종합센서 이상으로 간주 
+			// error_type을 장비의 return 값으로  
 
 void setup(void) {
   Serial.begin(115200); // 시리얼 통신 속도 설정, 하나의 속도만 사용
