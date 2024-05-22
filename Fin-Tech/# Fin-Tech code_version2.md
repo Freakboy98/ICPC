@@ -20,9 +20,9 @@ DHT dht(DHTPIN, DHTTYPE); // 온/습도 센서 초기화
 int16_t gas_condition = 0; // 가스센서 화재 판단을 위한 변수
 int16_t temp_condition = 0; //온도센서 화재 판단을 위한 변수 
 int16_t error_type = 0; // 최종 판단을 위한 변수 
-						// 1이면 가스센서 이상
-					    // 2이면 온도센서 이상, 3이면 종합센서 이상으로 간주 
-					    // error_type을 장비의 return 값으로  
+			// 1이면 가스센서 이상
+			// 2이면 온도센서 이상, 3이면 종합센서 이상으로 간주 
+			// error_type을 장비의 return 값으로  
 
 float data[MAX_DATA_VALUE]; // 온도 값을 저장하는 배열
 int dataIndex = 0; //데이터 인덱스
