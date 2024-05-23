@@ -235,10 +235,10 @@ void loop(void) {
   }
   
   //주방화재 판단 
-  if(gas_condition >= 3 && explo >= 1) {
+  if(gas_condition >= 3) {
     error_type = 1;
     Serial.println("화재 발생! 대피하세요!!");
-  } else if (gas_condition > 2 || explo  > 0) {
+  } else if (gas_condition > 0 || explo  > 0) {
     Serial.println("가스센서 이상!위험개소를 확인하세요!");
   } 
   
