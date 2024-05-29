@@ -99,6 +99,7 @@ void loop(void) {
 ```
 ## __error_type update__
 ```C
+//일반매장
 if (gas_condition >= 3) {
     error_type = 1;
     Serial.println("가스센서 이상!");
