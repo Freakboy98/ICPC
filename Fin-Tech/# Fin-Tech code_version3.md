@@ -133,6 +133,7 @@ if (gas_condition >= 3) {
 ```
 ## __error_type update__
 ```C
+//일반 매장
   	//이미 가스센서의 문제가 있다면  
   	if(error_type ==1 ){
   		Serial.println("화재발생! 즉시 대피하세요!!");
@@ -290,6 +291,7 @@ void loop(void) {
 ```
 ## __error_type update__
 ```C
+//Food court
     if (t > t_threshold) {
       Serial.println("경고: 온도 기준치 초과");
       
