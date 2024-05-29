@@ -292,7 +292,8 @@ void loop(void) {
 ## __error_type update__
 ```C
 //Food court
-    if (t > t_threshold) {
+    if (t > t_threshold) { //일반 매장의 경우 t_threshold에 절대 기준치 대입
+			   //푸드코드의 경우 t_threshold에 이전 데이터의 평균 대입
       Serial.println("경고: 온도 기준치 초과");
       
       //가스센서 이상 여부 우선 확인
